@@ -1,16 +1,26 @@
+using System;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+public class Enemy : MonoBehaviour {
+
+    public static event Action OnEnemyKill;
+    public static event Action OnEnemyCreate;
+
+    public static int enemyCount = 0;
+
+    private void Awake()
     {
-        
+        enemyCount++;
+        OnEnemyCreate?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if(bullet != null)
+        {
+            OnEnemyKill?.Invoke();
+            Destroy(gameObject);
+        }
     }
 }
