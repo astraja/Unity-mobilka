@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 927867249}
+      - m_Target: {fileID: 1169747431}
         m_TargetAssemblyTypeName: Throw, Assembly-CSharp
         m_MethodName: ResetPosition
         m_Mode: 1
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75bd76495fe737498d180cc22a81ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &927867248
+--- !u!1 &1169747430
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -433,22 +433,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 927867250}
-  - component: {fileID: 927867249}
+  - component: {fileID: 1169747432}
+  - component: {fileID: 1169747431}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Bullet Thrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &927867249
+--- !u!114 &1169747431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927867248}
+  m_GameObject: {fileID: 1169747430}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 883ffcc108252da449fac1eb42c45704, type: 3}
@@ -456,16 +456,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 5
   Bullet: {fileID: 702080402}
---- !u!4 &927867250
+--- !u!4 &1169747432
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927867248}
+  m_GameObject: {fileID: 1169747430}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4979034, y: -0.29669586, z: 0.020564094}
+  m_LocalPosition: {x: 0.15174364, y: -0.33287668, z: 7.90759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1059,7 +1059,7 @@ SceneRoots:
   - {fileID: 3533950212417311731}
   - {fileID: 1500912584306893968}
   - {fileID: 1780330378}
-  - {fileID: 927867250}
   - {fileID: 611622357}
   - {fileID: 1354763261}
   - {fileID: 1869669370}
+  - {fileID: 1169747432}

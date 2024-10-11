@@ -29,10 +29,6 @@ public class Throw : MonoBehaviour
 
     private void Update()
     {
-        if(Input.touchCount==2 || Input.GetMouseButtonDown(1))
-        {
-            ResetPosition();
-        }
             
         if (Input.touchCount > 0)
         {
