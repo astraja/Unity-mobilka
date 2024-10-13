@@ -1,35 +1,32 @@
+using System;
 using UnityEngine;
 
-public class Throw : MonoBehaviour
+public class Thrower : MonoBehaviour
 {
     [SerializeField] float force = 5f;
-    [SerializeField] Bullet Bullet;
+    [SerializeField] GameObject BulletPrefab;
+    [SerializeField] Transform BulletPrefabStartPos;
     Camera cam;
-    Rigidbody2D rb;
+    GameObject bullet;
+    Rigidbody2D bulletRb;
 
     Vector3 tempPos;
-    Vector3 dir;
     Vector3 startPos;
+    Vector3 dir;
     bool canBeMoved = true;
     bool isDragging = false;
 
-    void Awake()
-    {
-        rb = Bullet.transform.GetComponent<Rigidbody2D>();
-    }
+    public static event Action OnThrow;
+
 
     void Start()
     {
         cam = Camera.main;
-        startPos = Bullet.transform.position;
-        ResetPosition();
+        CreateNewBullet();
     }
-
-
 
     private void Update()
     {
-            
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -38,7 +35,7 @@ public class Throw : MonoBehaviour
             {
                 Ray ray = cam.ScreenPointToRay(touch.position);
                 RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-                if (hit && hit.collider.gameObject == Bullet.gameObject)
+                if (hit && hit.collider.gameObject == bullet)
                 {
                     isDragging = true;
                 }
@@ -47,28 +44,32 @@ public class Throw : MonoBehaviour
             {
                 tempPos = cam.ScreenToWorldPoint(touch.position);
                 tempPos.z = 0f;
-                Bullet.transform.position = tempPos;
+                bullet.transform.position = tempPos;
             }
             else if (touch.phase == TouchPhase.Ended && isDragging)
             {
- 
+
                 isDragging = false;
                 if (canBeMoved)
                 {
-                    rb.gravityScale = 1f;
+                    bulletRb.gravityScale = 1f;
                     dir = (startPos - tempPos);
-                    rb.AddForce(dir * force, ForceMode2D.Impulse);
+                    bulletRb.AddForce(dir * force, ForceMode2D.Impulse);
                     canBeMoved = false;
+                    OnThrow?.Invoke();
+                    Destroy(bullet, 1.5f);
                 }
             }
         }
     }
 
-    public void ResetPosition()
+    public void CreateNewBullet()
     {
-        Bullet.transform.position = startPos;
-        rb.linearVelocity = Vector2.zero;
-        rb.gravityScale = 0f;  // Wyłącz grawitację po resecie
+        startPos = BulletPrefabStartPos.transform.position;
+        bullet = Instantiate(BulletPrefab, startPos, Quaternion.identity);
+        bulletRb = bullet.GetComponent<Rigidbody2D>();
+        bulletRb.linearVelocity = Vector2.zero;
+        bulletRb.gravityScale = 0f;
         canBeMoved = true;
     }
 }

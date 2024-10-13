@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286403765158107763}
+  - component: {fileID: 7923825767721252872}
   - component: {fileID: 8975482276087499308}
-  - component: {fileID: 4404884352093247983}
   - component: {fileID: 7904959545536002723}
   - component: {fileID: 4341566470750936949}
   m_Layer: 0
@@ -35,6 +35,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7923825767721252872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722367019680829417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bcccb3c7970324a91c951f03827c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletCount: 0
 --- !u!212 &8975482276087499308
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90,18 +103,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4404884352093247983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5722367019680829417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b75bd76495fe737498d180cc22a81ad8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &7904959545536002723
 Rigidbody2D:
   serializedVersion: 5
@@ -117,7 +118,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
