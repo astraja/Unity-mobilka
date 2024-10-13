@@ -3,13 +3,13 @@ using TMPro;
 
 public class UiManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI KilledTxt;
-    [SerializeField] TextMeshProUGUI BulletCount;
+    [SerializeField] TextMeshProUGUI _killedTxt;
+    [SerializeField] TextMeshProUGUI _bulletCountTxt;
 
     void UpdateUi(int enemyKilled, int enemyCount, int bulletCount)
     {
-        KilledTxt.text = $"{enemyKilled} / {enemyCount}";
-        BulletCount.text = $"Bullets: {bulletCount}";
+        _killedTxt.text = $"{enemyKilled} / {enemyCount}";
+        _bulletCountTxt.text = $"Bullets: {bulletCount}";
     }
 
 

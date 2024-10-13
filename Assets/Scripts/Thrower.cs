@@ -3,25 +3,22 @@ using UnityEngine;
 
 public class Thrower : MonoBehaviour
 {
-    [SerializeField] float force = 5f;
-    [SerializeField] GameObject BulletPrefab;
-    [SerializeField] Transform BulletPrefabStartPos;
-    Camera cam;
-    GameObject bullet;
-    Rigidbody2D bulletRb;
-
-    Vector3 tempPos;
-    Vector3 startPos;
-    Vector3 dir;
-    bool canBeMoved = true;
-    bool isDragging = false;
-
-    public static event Action OnThrow;
-
+    [SerializeField] float _force = 5f;
+    [SerializeField] GameObject _bulletPrefab;
+    [SerializeField] Transform _bulletPrefabStartPos;
+    Camera _cam;
+    GameObject _bullet;
+    Rigidbody2D _bulletRb;
+    LineRenderer _lineRenderer;
+    Vector3 _tempPos;
+    Vector3 _startPos;
+    Vector3 _dir;
+    bool _canBeMoved = true;
+    bool _isDragging = false;
 
     void Start()
     {
-        cam = Camera.main;
+        _cam = Camera.main;
         CreateNewBullet();
     }
 
@@ -33,31 +30,32 @@ public class Thrower : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                Ray ray = cam.ScreenPointToRay(touch.position);
+                Ray ray = _cam.ScreenPointToRay(touch.position);
                 RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-                if (hit && hit.collider.gameObject == bullet)
+                if (hit && hit.collider.gameObject == _bullet)
                 {
-                    isDragging = true;
+                    _isDragging = true;
                 }
             }
-            else if (touch.phase == TouchPhase.Moved && isDragging)
+            else if (touch.phase == TouchPhase.Moved && _isDragging)
             {
-                tempPos = cam.ScreenToWorldPoint(touch.position);
-                tempPos.z = 0f;
-                bullet.transform.position = tempPos;
+                _tempPos = _cam.ScreenToWorldPoint(touch.position);
+                _tempPos.z = 0f;
+                _bullet.transform.position = _tempPos;
+                _lineRenderer.SetPosition(1, _bullet.transform.position);
             }
-            else if (touch.phase == TouchPhase.Ended && isDragging)
+            else if (touch.phase == TouchPhase.Ended && _isDragging)
             {
 
-                isDragging = false;
-                if (canBeMoved)
+                _isDragging = false;
+                if (_canBeMoved)
                 {
-                    bulletRb.gravityScale = 1f;
-                    dir = (startPos - tempPos);
-                    bulletRb.AddForce(dir * force, ForceMode2D.Impulse);
-                    canBeMoved = false;
-                    OnThrow?.Invoke();
-                    Destroy(bullet, 1.5f);
+                    _bulletRb.gravityScale = 1f;
+                    _dir = (_startPos - _tempPos);
+                    _bulletRb.AddForce(_dir * _force, ForceMode2D.Impulse);
+                    _canBeMoved = false;
+                    Destroy(_bullet, 2f);
+                    _lineRenderer.SetPosition(1, _startPos);
                 }
             }
         }
@@ -65,11 +63,17 @@ public class Thrower : MonoBehaviour
 
     public void CreateNewBullet()
     {
-        startPos = BulletPrefabStartPos.transform.position;
-        bullet = Instantiate(BulletPrefab, startPos, Quaternion.identity);
-        bulletRb = bullet.GetComponent<Rigidbody2D>();
-        bulletRb.linearVelocity = Vector2.zero;
-        bulletRb.gravityScale = 0f;
-        canBeMoved = true;
+
+            _startPos = _bulletPrefabStartPos.transform.position;
+            _bullet = Instantiate(_bulletPrefab, _startPos, Quaternion.identity);
+            _bulletRb = _bullet.GetComponent<Rigidbody2D>();
+            _bulletRb.linearVelocity = Vector2.zero;
+            _bulletRb.gravityScale = 0f;
+            _canBeMoved = true;
+            _lineRenderer = _bullet.GetComponent<LineRenderer>();
+            _lineRenderer.SetPosition(0, _startPos);
+            _lineRenderer.SetPosition(1, _bullet.transform.position);
+
+        
     }
 }
