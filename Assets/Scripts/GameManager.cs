@@ -4,74 +4,75 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static event Action<int,int,int> OnStatsChange;
+    public static event Action<int, int> OnStatsChange;
     [SerializeField] Transform _enemiesContainer;
-    int _bulletCount;
+
     int _enemyCount = 0;
     int _enemyKilled = 0;
+
     int _activeScene;
     int _allScenesCount;
 
-    void AddEnemyKilled()
+    void Start()
     {
-        _enemyKilled++;
+        _enemyCount = _enemiesContainer.childCount;
+        _activeScene = SceneManager.GetActiveScene().buildIndex;
+        _allScenesCount = SceneManager.sceneCountInBuildSettings;
         CheckGameState();
-        ChangeUi();
     }
 
-    void ChangeUi()
+    void Update()
     {
-        OnStatsChange?.Invoke(_enemyKilled, _enemyCount, _bulletCount);
+
     }
 
     void CheckGameState()
     {
+        OnStatsChange?.Invoke(_enemyKilled, _enemyCount);
         if (_enemyCount == _enemyKilled)
         {
-            if(_allScenesCount - _activeScene > 1)
+            if (_allScenesCount - _activeScene > 1)
             {
                 SceneManager.LoadScene(++_activeScene);
             }
         }
 
-        if (_bulletCount == 0)
+    }
+
+    void EnemyKill()
+    {
+        _enemyKilled++;
+        CheckGameState();
+    }
+
+    void CheckBulletAmount(int bullet)
+    {
+        if (bullet == 0)
         {
-            SceneManager.LoadScene(0);
+            {
+                GameOver();
+            }
         }
     }
 
-
-    void Start()
+    void GameOver()
     {
-        _enemyCount = _enemiesContainer.childCount;
-        _bulletCount = _enemyCount + 1;
-        _activeScene = SceneManager.GetActiveScene().buildIndex;
-        _allScenesCount = SceneManager.sceneCountInBuildSettings;
-        ChangeUi();
-    }
-    
-    void BulletDestroy()
-    {
-        _bulletCount--;
-        ChangeUi();
-        CheckGameState();
-        //Create new bullet
+        SceneManager.LoadScene(0);
     }
 
-    void Update()
+
+
+
+    void OnEnable()
     {
-        
+        Enemy.OnEnemyKill += EnemyKill;
+        Thrower.OnBulletChange += CheckBulletAmount;
     }
 
-    private void OnEnable()
+    void OnDisable()
     {
-        Enemy.OnEnemyKill += AddEnemyKilled;
-        Bullet.OnBulletDestroy += BulletDestroy;
+        Enemy.OnEnemyKill -= EnemyKill;
+        Thrower.OnBulletChange -= CheckBulletAmount;
     }
 
-    private void OnDisable()
-    {
-        Enemy.OnEnemyKill -= AddEnemyKilled;
-        Bullet.OnBulletDestroy -= BulletDestroy;
-    }
 }

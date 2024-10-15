@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: bb5d8d21b2e789147a53f16fdf955533
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3649993585809973781
+    second: Cloud explosion_0
+  - first:
+      213: 4999972918837601851
+    second: Cloud explosion_1
+  - first:
+      213: 8346779319628807045
+    second: Cloud explosion_2
+  - first:
+      213: 7410116746530354057
+    second: Cloud explosion_3
+  - first:
+      213: 3061691927804940095
+    second: Cloud explosion_4
+  - first:
+      213: -2034003375645857410
+    second: Cloud explosion_5
+  - first:
+      213: -1038258996912436558
+    second: Cloud explosion_6
+  - first:
+      213: 264648934406892461
+    second: Cloud explosion_7
+  - first:
+      213: -6526112557846303333
+    second: Cloud explosion_8
+  - first:
+      213: 4524156917151390418
+    second: Cloud explosion_9
+  - first:
+      213: -5571651065633151541
+    second: Cloud explosion_10
+  - first:
+      213: 7455352267574635628
+    second: Cloud explosion_11
+  - first:
+      213: -1550770365355105061
+    second: Cloud explosion_12
+  - first:
+      213: -5275536493634066591
+    second: Cloud explosion_13
+  - first:
+      213: 4114538605833653496
+    second: Cloud explosion_14
+  - first:
+      213: -6082021572105995207
+    second: Cloud explosion_15
+  - first:
+      213: 8284915302182199817
+    second: Cloud explosion_16
+  - first:
+      213: 4067735969129557388
+    second: Cloud explosion_17
+  - first:
+      213: 5237283031188752792
+    second: Cloud explosion_18
+  - first:
+      213: -951255958000383545
+    second: Cloud explosion_19
+  - first:
+      213: 755319638685916888
+    second: Cloud explosion_20
+  - first:
+      213: 6056864996724744259
+    second: Cloud explosion_21
+  - first:
+      213: 6726599780124668966
+    second: Cloud explosion_22
+  - first:
+      213: 3642252071977856570
+    second: Cloud explosion_23
+  - first:
+      213: -524784259847551341
+    second: Cloud explosion_24
+  - first:
+      213: 1988719097241358389
+    second: Cloud explosion_25
+  - first:
+      213: 6870375429072330214
+    second: Cloud explosion_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cloud explosion_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 472
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51268aae3d167a230800000000000000
+      internalID: 3649993585809973781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_1
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 464
+        width: 94
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3663e1f0e8736540800000000000000
+      internalID: 4999972918837601851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_2
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 450
+        width: 150
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b3d0d6197b5d370800000000000000
+      internalID: 8346779319628807045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 220
+        width: 191
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9837d15abe506d660800000000000000
+      internalID: 7410116746530354057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 224
+        width: 163
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f8e7836905d7a20800000000000000
+      internalID: 3061691927804940095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_12
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 237
+        width: 145
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd46ecca19e8a7ae0800000000000000
+      internalID: -1550770365355105061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud explosion_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 38
+        width: 118
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3eaba446f0eb8230800000000000000
+      internalID: 3642252071977856570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 08f6a6234fbb06947ad9804f2beba752
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cloud explosion_5: -1713989503
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -270,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 214932072}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: Enemies Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,6 +484,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374769256}
   m_CullTransparentMesh: 1
+--- !u!1 &609991021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609991023}
+  - component: {fileID: 609991022}
+  m_Layer: 0
+  m_Name: StatsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &609991022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609991021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9a69a0c624d34488bf597fdfdfd1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &609991023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609991021}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611622353
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +663,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -779,9 +823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7230ebd4c7b37c4f80e5ef959dfaa8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 5
   _bulletPrefab: {fileID: 5722367019680829417, guid: f8d8feee0fc7d8d4bbf628cbe5c1d7b9, type: 3}
   _bulletPrefabStartPos: {fileID: 631972941}
+  _enemiesContainer: {fileID: 214932072}
 --- !u!4 &1170144345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1947348725756320397, guid: ba40dbad83b58ee44b7581f7898ab3ad, type: 3}
@@ -1467,3 +1511,4 @@ SceneRoots:
   - {fileID: 1869669370}
   - {fileID: 1169747432}
   - {fileID: 1969448265}
+  - {fileID: 609991023}
