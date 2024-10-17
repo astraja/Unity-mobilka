@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public static event Action OnBulletDestroy;
-    static int _bulletCount = 0;
     [SerializeField] float _force = 5f;
+    BulletManager _bulletManager;
     Camera _cam;
     Rigidbody2D _rb;
     LineRenderer _lineRenderer;
@@ -16,11 +15,10 @@ public class Bullet : MonoBehaviour
     Vector3 _dir;
     bool _canBeMoved = true;
     bool _isDragging = false;
-    Thrower _thrower;
 
-    public void Initialize(Thrower thrower)
+    private void Awake()
     {
-        _thrower = thrower;
+        _bulletManager = transform.parent.GetComponent<BulletManager>();
     }
 
     private void Start()
@@ -72,17 +70,16 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    public IEnumerator DestroyIt(int sec)
+    public IEnumerator DestroyIt(float sec)
     {
         yield return new WaitForSeconds(sec);
-        OnBulletDestroy?.Invoke();
-        _thrower.CreateNewBullet();
+        _bulletManager.OnBulletDestroy();
         Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision with: " + collision.gameObject.name);
-        StartCoroutine(DestroyIt(0));
+        StartCoroutine(DestroyIt(0.01f));
     }
 }

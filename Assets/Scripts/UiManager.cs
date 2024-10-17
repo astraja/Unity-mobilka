@@ -3,32 +3,22 @@ using TMPro;
 
 public class UiManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _killedTxt;
+    [SerializeField] TextMeshProUGUI _enemiesCountTxt;
     [SerializeField] TextMeshProUGUI _bulletCountTxt;
 
-    void UpdateUi(int enemyKilled, int enemyCount)
+    public void OnEnemyUpdate(int enemiesCount)
     {
-        _killedTxt.text = $"{enemyKilled} / {enemyCount}";
+        _enemiesCountTxt.text = enemiesCount.ToString();
     }
-    void UpdateBulletUi(int bulletCount)
-    {
-        _bulletCountTxt.text = $"Bullets: {bulletCount}";
-    }
+
 
     public void QuitApp()
     {
         Application.Quit();
     }
 
-    private void OnEnable()
+    public void OnBulletUpdate(int bulletIndex)
     {
-        GameManager.OnStatsChange += UpdateUi;
-        Thrower.OnBulletChange += UpdateBulletUi;
-    }
-
-    private void OnDisable()
-    {
-        GameManager.OnStatsChange -= UpdateUi;
-        Thrower.OnBulletChange -= UpdateBulletUi;
+        _bulletCountTxt.text = $"{bulletIndex}";
     }
 }
