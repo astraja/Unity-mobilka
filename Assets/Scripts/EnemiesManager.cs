@@ -17,6 +17,7 @@ public class EnemiesManager : MonoBehaviour
     void SetEnemiesValues()
     {
         _enemiesCount = transform.childCount;
+        print(_enemiesCount);
         _uiManager.OnEnemyUpdate(_enemiesCount);
         _gameManager.OnEnemyUpdate(_enemiesCount);
     }
