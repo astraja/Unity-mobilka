@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vampiresvsgarlic_0: -8913310311562893583
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
