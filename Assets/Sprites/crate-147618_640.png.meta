@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a01a6bcf4d741fa4eb48d8f57302ecb7
+guid: 8f9caab21e704b646b13d9e9a203e0a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6785364521180098747
-    second: background_effect_0
+      213: 640948586817086549
+    second: crate-147618_640_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_effect_0
+      name: crate-147618_640_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 499
-        height: 350
+        width: 635
+        height: 640
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54f858b1bea85d1a0800000000000000
-      internalID: -6785364521180098747
+      spriteID: 5546584085b15e800800000000000000
+      internalID: 640948586817086549
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-      background_effect_0: -6785364521180098747
+    nameFileIdTable:
+      crate-147618_640_0: 640948586817086549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

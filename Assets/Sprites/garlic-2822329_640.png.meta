@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a01a6bcf4d741fa4eb48d8f57302ecb7
+guid: 097e7f27fa3fd7242a430461ba80c3be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6785364521180098747
-    second: background_effect_0
+      213: -544620001019967816
+    second: garlic-2822329_640_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_effect_0
+      name: garlic-2822329_640_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 499
-        height: 350
+        x: 125
+        y: 89
+        width: 380
+        height: 431
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54f858b1bea85d1a0800000000000000
-      internalID: -6785364521180098747
+      spriteID: 8b6c1ad9efe1178f0800000000000000
+      internalID: -544620001019967816
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-      background_effect_0: -6785364521180098747
+    nameFileIdTable:
+      garlic-2822329_640_0: -544620001019967816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

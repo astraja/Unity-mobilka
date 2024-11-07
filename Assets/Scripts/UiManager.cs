@@ -17,8 +17,8 @@ public class UiManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void OnBulletUpdate(int bulletIndex)
+    public void OnBulletUpdate(int bulletsLeft)
     {
-        _bulletCountTxt.text = $"{bulletIndex}";
+        _bulletCountTxt.text = $"{bulletsLeft}";
     }
 }

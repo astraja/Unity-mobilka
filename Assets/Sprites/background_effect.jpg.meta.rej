@@ -1,0 +1,9 @@
+diff a/Assets/Sprites/background_effect.jpg.meta b/Assets/Sprites/background_effect.jpg.meta	(rejected hunks)
+@@ -147,7 +147,6 @@
+     secondaryTextures: []
+     spriteCustomMetadata:
+       entries: []
+-    nameFileIdTable: {}
+     nameFileIdTable:
+       background_effect_0: -6785364521180098747
+   mipmapLimitGroupName: 

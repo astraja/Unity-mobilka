@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
         _enemiesTotal = enemiesTotal;
     }
 
-    public void OnBulletUpdate(int bulletsCreated)
+    public void OnBulletUpdate(int bulletsLeft)
     {
-        if (bulletsCreated > _enemiesTotal)
+        if (bulletsLeft ==0)
         {
             SceneManager.LoadScene(_activeScene);
         }
@@ -35,9 +35,13 @@ public class GameManager : MonoBehaviour
     {
         if (enemiesLeft == 0) 
         {
-            if (_allScenesCount - _activeScene > 1)
+            if (_allScenesCount > _activeScene + 1)
             {
                 SceneManager.LoadScene(++_activeScene);
+            }
+            else
+            {
+                SceneManager.LoadScene(0);
             }
         }
     }

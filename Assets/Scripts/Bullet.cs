@@ -80,6 +80,6 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision with: " + collision.gameObject.name);
-        StartCoroutine(DestroyIt(0.01f));
+        StartCoroutine(DestroyIt(0.1f));
     }
 }
